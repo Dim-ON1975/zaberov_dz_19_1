@@ -258,7 +258,8 @@
 
     <div class="b-example-divider"></div>
 
-    <div class="container">
+
+    <div class="container" style="overflow-y: scroll;">
         <header>
             <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
                 <h1 class="display-4 fw-normal text-body-emphasis">Главная</h1>
@@ -266,27 +267,146 @@
             </div>
         </header>
 
-        <main class="row">
-            <div class="row text-center">
-                <div class="col-4">
-                    <div class="card mb-4 rounded-3 shadow-sm">
-                        <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal">Товар 1</h4>
-                        </div>
-                        <div class="card-body">
-                            <h2 class="card-title pricing-card-title">$100</h2>
-                            <p>
-                                10 users included,
-                                2 GB of storage,
-                                Email support,
-                                Help center access
-                            </p>
-                            <button type="button" class="btn btn-success">Купить</button>
-                        </div>
+        <main class="row text-center">
+            <!-- Карточка -->
+            <div class="col-4">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Товар 1</h4>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title pricing-card-title">$100</h2>
+                        <p>
+                            Включено 10 пользователей,
+                            2 ГБ памяти,
+                            Поддержка по электронной почте,
+                            Доступ к справочному центру
+                        </p>
+                        <button type="button" class="btn btn-success">Купить</button>
                     </div>
                 </div>
             </div>
+            <!-- Форма -->
+            <div class="col-8">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Контактные данные</h4>
+                    </div>
+                    <form class="row card-body gy-5">
+                        <div class="col-6 text-start">
+                            <label for="NameInput" class="form-label">Имя</label>
+                            <input type="text" id="NameInput" class="form-control" placeholder="Иванов Иван">
+                        </div>
+                        <div class="col-6 text-start">
+                            <label for="EmailInput" class="form-label">Email адрес</label>
+                            <input type="email" id="EmailInput" class="form-control" placeholder="name@example.com">
+                        </div>
+
+                        <div class="card-body" style="padding-bottom: 0;">
+                            <button type="submit" class="btn btn-success">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
+        <!-- FAQ -->
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-center">
+                <h4 class="my-0 fw-normal">FAQ</h4>
+            </div>
+            <div class="row card-body">
+                <p>
+                    <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#collapseExample_1" role="button" aria-expanded="false" aria-controls="collapseExample_1">
+                        Где купить?
+                    </a>
+                </p>
+                <div class="collapse pb-3" id="collapseExample_1">
+                    <div class="card card-body">
+                        Образовательный центр приглашает слушателей на курс цифровой схемотехники в удаленном формате.
+                        Слушатели имеют возможность не брать отпуск на время профпереподготовки – обучение проводится дистанционно.
+                        Клиенты будут изучать методические материалы на сайте учебного центра, а по завершении курса получат диплом
+                        о пройденной переподготовке.
+                    </div>
+                </div>
+                <p>
+                    <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#collapseExample_2" role="button" aria-expanded="false" aria-controls="collapseExample_2">
+                        Как доставить?
+                    </a>
+                </p>
+                <div class="collapse pb-3" id="collapseExample_2">
+                    <div class="card card-body">
+                        После успешной сдачи экзаменов, слушатели получают диплом установленного образца.
+                        При отсутствии возможности забрать диплом лично, бесплатно отправим документ почтой или курьером.
+                    </div>
+                </div>
+                <p>
+                    <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#collapseExample_3" role="button" aria-expanded="false" aria-controls="collapseExample_3">
+                        Какая гарантия?
+                    </a>
+                </p>
+                <div class="collapse pb-3" id="collapseExample_3">
+                    <div class="card card-body">
+                        Пройти курс схемотехники можно за 1,5-3 месяца.
+                        Минимальная длительность профпереподготовки по ФЗ-273 составляет 252 академических часа занятий.
+                        Срок обучения по персональной программе может отличаться и зависит
+                        от количества изучаемых дисциплин.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Таблица -->
+        <div>
+            <table class="table table-bordered caption-top text-center">
+                <caption>Состояние покупок</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">№ п/п</th>
+                        <th scope="col">Название товара</th>
+                        <th scope="col">Цена за штуку, руб.</th>
+                        <th scope="col">Количество, шт.</th>
+                        <th scope="col">Итоговая сумма, руб.</th>
+                        <th scope="col">Статус заказа</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td class="text-start">Цифровая схемотехника</td>
+                        <td>35000</td>
+                        <td>1</td>
+                        <td>35000</td>
+                        <td class="table-warning">Обработка</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td class="text-start">Программирование Python</td>
+                        <td>180000</td>
+                        <td>2</td>
+                        <td>360000</td>
+                        <td class="table-success">Обработан</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td class="text-start">SQL</td>
+                        <td>150000</td>
+                        <td>1</td>
+                        <td>150000</td>
+                        <td class="table-danger">Отмена</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td class="text-start">Программирование JavaScript</td>
+                        <td>250000</td>
+                        <td>1</td>
+                        <td>250000</td>
+                        <td class="table-primary">Новый</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+
 
     </div>
 
